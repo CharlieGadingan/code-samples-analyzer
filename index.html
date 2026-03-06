@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Samples for Syntax Analyzer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: #0d1117;
+            color: #c9d1d9;
+            line-height: 1.6;
+            padding: 2rem;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            color: #58a6ff;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid #30363d;
+            padding-bottom: 1rem;
+        }
+        
+        h2 {
+            color: #58a6ff;
+            margin: 2rem 0 1rem;
+        }
+        
+        .language-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .language-card {
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 8px;
+            padding: 1.5rem;
+        }
+        
+        .language-card h3 {
+            color: #58a6ff;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .file-list {
+            list-style: none;
+        }
+        
+        .file-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #30363d;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .file-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .file-icon {
+            color: #8b949e;
+        }
+        
+        .badge {
+            background: rgba(88, 166, 255, 0.15);
+            color: #58a6ff;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            margin-left: 0.5rem;
+        }
+        
+        .badge.error {
+            background: rgba(248, 81, 73, 0.15);
+            color: #f85149;
+        }
+        
+        .badge.warning {
+            background: rgba(210, 153, 34, 0.15);
+            color: #d29922;
+        }
+        
+        .badge.clean {
+            background: rgba(63, 185, 80, 0.15);
+            color: #3fb950;
+        }
+        
+        .instructions {
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        code {
+            background: #0d1117;
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📁 Code Samples for Syntax Analyzer</h1>
+        
+        <div class="instructions">
+            <h2>📋 How to Use</h2>
+            <ol>
+                <li>Clone this repository: <code>git clone [your-repo-url]</code></li>
+                <li>Point your CodeTracker server to this folder</li>
+                <li>Open the Syntax Analyzer and test each file</li>
+                <li>Look for files with <span class="badge error">errors</span> and <span class="badge warning">warnings</span> badges</li>
+            </ol>
+        </div>
+        
+        <div class="language-grid">
+            <!-- Java -->
+            <div class="language-card">
+                <h3><i class="file-icon">☕</i> Java</h3>
+                <ul class="file-list">
+                    <li><span class="file-icon">📄</span> HelloWorld.java <span class="badge clean">clean</span></li>
+                    <li><span class="file-icon">📄</span> Calculator.java <span class="badge clean">clean</span></li>
+                    <li><span class="file-icon">📄</span> Student.java <span class="badge clean">clean</span></li>
+                    <li><span class="file-icon">📄</span> BuggyCode.java <span class="badge error">has errors</span></li>
+                </ul>
+            </div>
+            
+            <!-- Python -->
+            <div class="language-card">
+                <h3><i class="file-icon">🐍</i> Python</h3>
+                <ul class="file-list">
+                    <li><span class="file-icon">📄</span> hello_world.py <span class="badge clean">clean</span></li>
+                    <li><span class="file-icon">📄</span> calculator.py <span class="badge clean">clean</span></li>
+                    <li><span class="file-icon">📄</span> student.py <span class="badge clean">clean</span></li>
+                    <li><span class="file-icon">📄</span> buggy_code.py <span class="badge error">has errors</span></li>
+                </ul>
+            </div>
+            
+            <!-- C -->
+            <div class="language-card">
+                <h3><i class="file-icon">⚙️</i> C</h3>
+                <ul class="file-list">
+                    <li><span class="file-icon">📄</span> hello_world.c <span class="badge clean">clean</span></li>
+                    <li><span class="file-icon">📄</span> calculator.c <span class="badge clean">clean</span></li>
+                    <li><span class="file-icon">📄</span> student.c <span class="badge clean">clean</span></li>
+                    <li><span class="file-icon">📄</span> buggy_code.c <span class="badge error">has errors</span></li>
+                </ul>
+            </div>
+            
+            <!-- C++ -->
+            <div class="language-card">
+                <h3><i class="file-icon">🔧</i> C++</h3>
+                <ul class="file-list">
+                    <li><span class="file-icon">📄</span> hello_world.cpp <span class="badge clean">clean</span></li>
+                    <li><span class="file-icon">📄</span> calculator.cpp <span class="badge clean">clean</span></li>
+                    <li><span class="file-icon">📄</span> student.cpp <span class="badge clean">clean</span></li>
+                    <li><span class="file-icon">📄</span> buggy_code.cpp <span class="badge error">has errors</span></li>
+                </ul>
+            </div>
+            
+            <!-- JavaScript -->
+            <div class="language-card">
+                <h3><i class="file-icon">📜</i> JavaScript</h3>
+                <ul class="file-list">
+                    <li><span class="file-icon">📄</span> hello_world.js <span class="badge clean">clean</span></li>
+                    <li><span class="file-icon">📄</span> calculator.js <span class="badge clean">clean</span></li>
+                    <li><span class="file-icon">📄</span> student.js <span class="badge clean">clean</span></li>
+                    <li><span class="file-icon">📄</span> buggy_code.js <span class="badge warning">has warnings</span></li>
+                </ul>
+            </div>
+            
+            <!-- HTML/CSS -->
+            <div class="language-card">
+                <h3><i class="file-icon">🌐</i> HTML/CSS</h3>
+                <ul class="file-list">
+                    <li><span class="file-icon">📄</span> index.html <span class="badge clean">clean</span></li>
+                    <li><span class="file-icon">📄</span> style.css <span class="badge clean">clean</span></li>
+                    <li><span class="file-icon">📄</span> portfolio.html <span class="badge clean">clean</span></li>
+                    <li><span class="file-icon">📄</span> portfolio.css <span class="badge clean">clean</span></li>
+                    <li><span class="file-icon">📄</span> buggy.html <span class="badge error">has errors</span></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="instructions" style="margin-top: 2rem;">
+            <h2>🎯 What to Test</h2>
+            <ul>
+                <li><strong>Clean files:</strong> Should show no errors or warnings</li>
+                <li><strong>Buggy files:</strong> Should show various syntax errors for the analyzer to detect</li>
+                <li><strong>Try the analyzer on different languages to see if it correctly identifies issues</strong></li>
+                <li><strong>Test the feedback system by saving comments on different files</strong></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
